@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部标题 -->
+        <header>
+            <h1>图片压缩工具</h1>
+            <p>简单易用的在线图片压缩服务</p>
+        </header>
+
+        <!-- 上传区域 -->
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="imageInput" accept="image/png, image/jpeg" multiple hidden>
+            <div class="upload-box">
+                <svg class="upload-icon" viewBox="0 0 24 24">
+                    <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+                </svg>
+                <p>点击或拖拽图片到这里</p>
+                <p class="sub-text">支持PNG、JPG格式（最多10张）</p>
+            </div>
+        </div>
+
+        <!-- 图片预览和压缩控制区域 -->
+        <div class="preview-container" id="previewContainer" style="display: none;">
+            <div class="batch-preview">
+                <h3>批量压缩预览</h3>
+                <div class="batch-list" id="batchList">
+                    <!-- 图片项会动态插入这里 -->
+                </div>
+                <div class="batch-controls">
+                    <div class="quality-control">
+                        <label for="qualitySlider">压缩质量：<span id="qualityValue">80%</span></label>
+                        <input type="range" id="qualitySlider" min="1" max="100" value="80">
+                    </div>
+                    <button id="compressAllBtn" class="compress-all-btn">压缩所有图片</button>
+                    <button id="downloadAllBtn" class="download-btn">下载所有压缩后的图片</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
